@@ -11,3 +11,13 @@ console.log("Prezydent: " + country.president);
 console.log("Premierzy: " + country.primeMinisters);
 
 // Zadanie 0b
+var timeMachine = {
+	shape: "okrągły",
+	model: "V2",
+	run: function(date, place) {
+		return "przeniesiono się do daty " + date + " w miejscu " + place;
+	}
+}
+console.log("Kształt: " + timeMachine.shape);
+console.log("Model: " + timeMachine.model);
+console.log("Uruchomienie: " + timeMachine.run("21.12.2013", "Londyn"));
