@@ -25,3 +25,26 @@ car.printOverviews = function() {
 
 car.addOverview("18.11.2019");
 car.printOverviews();
+
+// Zadanie 2
+var calculator = {
+	a: 0,
+	b: 0,
+	
+    save: function (newA, newB) {
+        this.a = newA;
+        this.b = newB;
+    },
+
+	sum: function () {
+		return (this.a + this.b);
+	},
+	
+	multiply: function () {
+		return (this.a * this.b);
+	}
+};
+
+calculator.save(2, 3);
+console.log(calculator.sum());
+console.log(calculator.multiply());
