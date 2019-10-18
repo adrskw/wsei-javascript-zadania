@@ -111,3 +111,18 @@ for(var i = 0; i < animals.length; i++) {
 		console.log(animals[i][property]);
 	}
 }
+
+// Zadanie 6
+var spoon = {
+    isExist: true
+}
+
+var fork = spoon;
+fork.isExist  = false;
+
+if(spoon.isExist === true) {
+	console.log("Łyżka istnieje");
+}
+else {
+	console.log("Łyżka nie istnieje");
+}
