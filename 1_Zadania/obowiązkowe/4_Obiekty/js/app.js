@@ -43,3 +43,14 @@ var person = {
 console.log("Imię: " + person.name);
 console.log("Wiek: " + person.age);
 person.sayHello();
+
+// Zadanie 3
+var sandwiches = {
+	title: "Kanapki",
+	servings: 2
+}
+sandwiches.ingredients = ["2 kromki chleba", "masło", "4 plastry szynki", "2 plastry sera", "pomidor", "ogórek", "cebula"];
+
+console.log("Nazwa : " + sandwiches.title);
+console.log("Porcje : " + sandwiches.servings);
+console.log("Składniki : " + sandwiches.ingredients);
