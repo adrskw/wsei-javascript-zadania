@@ -21,3 +21,13 @@ var timeMachine = {
 console.log("Kształt: " + timeMachine.shape);
 console.log("Model: " + timeMachine.model);
 console.log("Uruchomienie: " + timeMachine.run("21.12.2013", "Londyn"));
+
+// Zadanie 1
+var book = {
+	title: "Quo vadis: Powieść z czasów Nerona ",
+	author: "Henryk Sienkiewicz",
+	numberOfPages: 460
+}
+console.log("Tytuł: " + book.title);
+console.log("Autor: " + book.author);
+console.log("Liczba stron: " + book.numberOfPages);
