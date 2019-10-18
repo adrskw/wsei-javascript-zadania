@@ -83,10 +83,12 @@ function create2DArray(rows, columns) {
 	var number = 0;
 	
 	for(var i = 0; i < rows; i++) {
+		finalArray[i] = [];
 		for(var j = 0; j < columns; j++) {
 			number++;
 			finalArray[i][j] = number;
 		}
 	}
+	console.log(finalArray);
 }
-create2DArray(4,4)
+create2DArray(4,4);
