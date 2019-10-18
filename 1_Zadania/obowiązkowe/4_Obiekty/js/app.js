@@ -31,3 +31,15 @@ var book = {
 console.log("Tytuł: " + book.title);
 console.log("Autor: " + book.author);
 console.log("Liczba stron: " + book.numberOfPages);
+
+// Zadanie 2
+var person = {
+	name: "Adrian",
+	age: 21,
+	sayHello: function() {
+		console.log("hello")
+	}
+}
+console.log("Imię: " + person.name);
+console.log("Wiek: " + person.age);
+person.sayHello();
