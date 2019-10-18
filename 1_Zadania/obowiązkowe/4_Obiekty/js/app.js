@@ -54,3 +54,21 @@ sandwiches.ingredients = ["2 kromki chleba", "masło", "4 plastry szynki", "2 pl
 console.log("Nazwa : " + sandwiches.title);
 console.log("Porcje : " + sandwiches.servings);
 console.log("Składniki : " + sandwiches.ingredients);
+
+// Zadanie 4
+var movie = {
+    director: "Peter Jackson",
+    writers: [" J.R.R. Tolkien ", "Fran Walsh", "Philippa Boyens", "Peter Jackson"],
+    stars: ["Elijah Wood", "Ian McKellen", "Orlando Bloom"],
+    country: "New Zealand | USA",
+    budget: "$93,000,000",
+    imdbPoints: 8.8,
+    year: 2001,
+    time: "2h 58 min",
+    category: " Adventure, Drama, Fantasy"
+}
+
+for(var property in movie) {
+	console.log(movie[property]);
+}
+
