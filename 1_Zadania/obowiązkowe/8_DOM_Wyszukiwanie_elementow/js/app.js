@@ -15,5 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	console.log(getDataAnimation(titleClassElement));
 	getDataAnimation(titleClassElement);
 	
+	// Zadanie 1
+	var test = document.getElementById("home");
+	console.log(test);
+	var test = document.querySelector("#home");
+	console.log(test);
+	
+	var test = document.querySelector("li[data-direction]");
+	console.log(test);
+	
+	var test = document.querySelector(".block");
+	console.log(test);
+	
 	
 });
