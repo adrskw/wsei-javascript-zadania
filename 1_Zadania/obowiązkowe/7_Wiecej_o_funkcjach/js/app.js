@@ -25,3 +25,22 @@ function jeden() {
 // wywołanie funkcji "jeden"
 jeden();
 
+// Zadanie 1
+// stworzenie funkcji "sortArray"
+function sortArray() {
+
+    // stworzenie tablicy "points" z liczbami całkowitymi
+    var points = [41, 3, 6, 1, 114, 54, 64];
+
+    // sortowanie tablicy "points" za pomocą funkcji "sort"
+    points.sort(function (a, b) {
+        // sortowanie tablicy rosnąco poprzez badanie różnicy dwóch sąsiadujących elementów tablicy
+        return a - b;
+    });
+
+    // zwracanie tablicy do funkcji
+    return points;
+}
+
+// wywołanie funkcji "sortArray"
+sortArray();
