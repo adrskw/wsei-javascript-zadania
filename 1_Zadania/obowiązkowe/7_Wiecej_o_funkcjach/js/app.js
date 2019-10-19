@@ -1,32 +1,27 @@
-/**
- * Zagniezdzanie funkcji.
- * Przesledz krok po kroku kazda linijke kodu. Kazda!
- * Napisz komentarze dla kazdej z linijek kodu
- */
-
-
-//Twoj komentarz ...
+// Zadanie 0
+// stworzenie funkcji "jeden"
 function jeden() {
 
-    //Twoj komentarz ...
+    // przypisanie do zmiennej "zmienna1" wartości 1
     var zmienna1 = 1;
 
-    //Twoj komentarz ...
+    // stworzenie funkcji "dwa"
     function dwa() {
 
-        //Twoj komentarz ...
+        // wyświetlenie wartości zmiennej "zmienna1"
         console.log(zmienna1);
 
-        //Twoj komentarz ...
+        // przypisanie do zmiennej "zmienna2" wartości 3, zmienna jest widoczna tylko dla funkcji dwa
         var zmienna2 = 3;
     }
 
-    //Twoj komentarz ...
+    // wywołanie funkcji "dwa"
     dwa();
 
-    //Twoj komentarz ...
-    console.log(zmienna2)
+    // wyświetlenie wartości zmiennej "zmienna2", zmienna nie jest widoczna
+    //console.log(zmienna2);
 }
+// "zmienna2" nie jest widoczna w funkcji "jeden", ponieważ jest to zmienna lokalna widoczna tylko dla funkcji "dwa", która jest wewnątrz funkcji "jeden"
+// wywołanie funkcji "jeden"
+jeden();
 
-//Twoj komentarz ...
-jeden()
