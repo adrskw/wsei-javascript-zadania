@@ -68,3 +68,49 @@ williamRobot.isFunctional = false;
 williamRobot.sayHi("Tina");
 williamRobot.fixIt();
 williamRobot.sayHi("Tina");
+
+// Zadanie 2
+function Calculator() {
+	this.operations = [];
+}
+
+Calculator.prototype.add = function (num1, num2) {
+	var result = num1 + num2;
+	console.log(result);
+	this.operations.push("added " + num1 + " to " + num2 +" got " + result);
+}
+Calculator.prototype.multiply = function (num1, num2) {
+	var result = num1 * num2;
+	console.log(result);
+	this.operations.push("multiplied " + num1 + " with " + num2 +" got " + result);
+}
+Calculator.prototype.subtract = function (num1, num2) {
+	var result = num1 - num2;
+	console.log(result);
+	this.operations.push("subtracted " + num1 + " from " + num2 +" got " + result);
+}
+Calculator.prototype.divide = function (num1, num2) {
+	var result = num1 / num2;
+	console.log(result);
+	this.operations.push("divided " + num1 + " by " + num2 +" got " + result);
+}
+Calculator.prototype.printOperations = function () {
+	console.log(this.operations);
+}
+Calculator.prototype.clearOperations = function () {
+	this.operations = [];
+}
+
+var calculator1 = new Calculator();
+console.log(calculator1);
+calculator1.add(2, 5);
+calculator1.clearOperations();
+calculator1.subtract(99, 5);
+calculator1.divide(50, 2);
+calculator1.divide(88, 4);
+calculator1.printOperations();
+
+var calculator2 = new Calculator();
+calculator2.multiply(10, 4);
+calculator2.add(2, 9);
+calculator2.printOperations();
