@@ -27,5 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	var test = document.querySelector(".block");
 	console.log(test);
 	
-	
+	// Zadanie 2
+	var test = document.querySelectorAll("nav li");
+	console.log(test);
+	var test = document.querySelectorAll("div p");
+	console.log(test);
+	var test = document.querySelectorAll("article div");
+	console.log(test);
 });
