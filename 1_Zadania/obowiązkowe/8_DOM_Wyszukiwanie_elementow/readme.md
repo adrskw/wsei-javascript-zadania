@@ -32,6 +32,6 @@ Pamiętaj, żeby za każdym razem sprawdzić, czy wczytałeś odpowiednie elemen
 ### Zadanie 3 (~ 5min - 10min)
 1. Wyszukaj na stronie i zapisz do odpowiednio nazwanej zmiennej **tag** ```article``` o **klasie** ```first```.
 2. W kolejnym etapie:
-  * wypisz w konsoli, ile elementów **h1** znajduje się w tym **tagu**.
+  * wypisz w konsoli, ile elementów **h2** znajduje się w tym **tagu**.
 
 Pamiętaj, żeby za każdym razem sprawdzić, czy wczytałeś odpowiednie elementy. Pamiętaj, żeby używać funkcji, które wyszukują wiele elementów. Za każdym razem wypisz w konsoli, ile jest znalezionych przez Ciebie elementów.

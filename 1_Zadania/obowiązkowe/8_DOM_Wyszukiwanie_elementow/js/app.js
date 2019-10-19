@@ -29,9 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 	// Zadanie 2
 	var test = document.querySelectorAll("nav li");
-	console.log(test);
+	console.log(test.length);
 	var test = document.querySelectorAll("div p");
-	console.log(test);
+	console.log(test.length);
 	var test = document.querySelectorAll("article div");
-	console.log(test);
+	console.log(test.length);
+	
+	// Zadanie 3
+	var firstArticle = document.querySelector("article.first");
+	var searchTags = firstArticle.getElementsByTagName("h2");
+	console.log(searchTags.length);
 });
