@@ -48,3 +48,23 @@ var calculator = {
 calculator.save(2, 3);
 console.log(calculator.sum());
 console.log(calculator.multiply());
+
+// Zadanie 3
+var stairs = {
+	step: 0,
+	up: function () {
+		this.step += 1;
+	},
+	down: function () {
+		this.step -= 1;
+	},
+	printStep: function () {
+		console.log(this.step);
+	}
+}
+
+stairs.up();
+stairs.up();
+stairs.up();
+stairs.down(); 
+stairs.printStep();
