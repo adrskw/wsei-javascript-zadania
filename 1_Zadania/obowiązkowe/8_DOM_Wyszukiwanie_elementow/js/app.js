@@ -37,6 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 	// Zadanie 3
 	var firstArticle = document.querySelector("article.first");
-	var searchTags = firstArticle.getElementsByTagName("h2");
+	var searchTags = firstArticle.getElementsByTagName("h1");
 	console.log(searchTags.length);
 });
