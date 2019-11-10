@@ -91,5 +91,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 	console.log(getClassInfo(banner));
 	
+	// Zadanie 6
+	function setDataDirection(elements) {
+		for(var i = 0; i < elements.length; i++) {
+			if(elements[i].dataset.direction === undefined) {
+				elements[i].dataset.direction = "top";
+			}
+		}
+	}	
 	
+	let findElements = document.querySelectorAll("nav li");
+	setDataDirection(findElements);
+	
+	console.log(document.getElementsByTagName("nav")[0].innerHTML);
 });
