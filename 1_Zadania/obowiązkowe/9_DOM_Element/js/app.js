@@ -65,5 +65,16 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 	console.log(getId(mainFooter));
 	
+	// Zadanie 4
+	function getTags(elements) {
+		let tags = [];
+		
+		for(var i = 0; i < elements.length; i++) {
+			tags[i] = elements[i].tagName;
+		}
+		
+		return tags;
+	}
 	
+	console.log(getTags(childElements));
 });
