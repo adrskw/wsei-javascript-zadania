@@ -37,5 +37,14 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 	// Kod zostaje dopisany wprost do elementów w HTML a nie do pliku CSS
 	
+	// Zadanie 2
+	let name = document.getElementById("name");
+	let fav_color = document.getElementById("fav_color");
+	let fav_meal = document.getElementById("fav_meal");
+	
+	name.innerHTML = "Adrian Skwarczyński";
+	fav_color.innerHTML = "czarny";
+	fav_meal.innerHTML = "kotlet schabowy";
+	
 	
 });
