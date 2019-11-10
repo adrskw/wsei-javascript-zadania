@@ -56,5 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		Analiza: ustalenie nowej wartości innerHTML zmieniło wewnętrzny kod każdego diva o klasie block
 	*/
 	
+	// Zadanie 3
+	function getId(element) {
+		return element.id;
+	}
+	
+	let mainFooter = document.getElementById("mainFooter");
+	
+	console.log(getId(mainFooter));
+	
 	
 });
