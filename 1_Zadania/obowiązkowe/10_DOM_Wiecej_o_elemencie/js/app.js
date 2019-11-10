@@ -46,5 +46,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	fav_color.innerHTML = "czarny";
 	fav_meal.innerHTML = "kotlet schabowy";
 	
+	// Zadanie 3
+	document.querySelector(".ex3 ul").classList.add("menu");
+	let menuElements = document.querySelectorAll(".ex3 li");
 	
+	for(var i = 0; i < menuElements.length; i++) {
+		menuElements[i].classList.add("menuElement");
+	}
+	
+	let errorMenuElements = document.querySelectorAll(".ex3 li.error");
+	
+	for(var i = 0; i < errorMenuElements.length; i++) {
+		errorMenuElements[i].classList.remove("error");
+	}
 });
