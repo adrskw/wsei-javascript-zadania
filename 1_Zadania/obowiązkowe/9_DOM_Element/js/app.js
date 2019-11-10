@@ -77,4 +77,19 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	
 	console.log(getTags(childElements));
+	
+	// Zadanie 5
+	function getClassInfo(element) {
+		let classes = [];
+		
+		for(var i = 0; i < element.classList.length; i++) {
+			classes[i] = element.classList[i];
+		}
+		
+		return classes;
+	}
+	
+	console.log(getClassInfo(banner));
+	
+	
 });
