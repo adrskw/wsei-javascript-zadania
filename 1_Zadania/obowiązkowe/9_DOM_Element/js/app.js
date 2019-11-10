@@ -8,5 +8,19 @@ document.addEventListener("DOMContentLoaded", function () {
     /*
     Poniżej napisz kod rozwiązujący zadania
      */
+	
+	// Zadanie 0
+	function getDatasInfo(elements) {
+		let dataValues = [];
+		
+		for(var i = 0; i < elements.length; i++) {
+			dataValues[i] = elements[0].dataset.color;
+		}
+
+		return dataValues;
+	}
+	
+	console.log(getDatasInfo(links));
+
 
 });
