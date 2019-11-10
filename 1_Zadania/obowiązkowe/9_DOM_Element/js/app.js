@@ -41,4 +41,20 @@ document.addEventListener("DOMContentLoaded", function () {
 	printTagAndClass(blocks);
 	console.log("links:")
 	printTagAndClass(links);
+	
+	// Zadanie 2
+	for(var i = 0; i < blocks.length; i++) {
+		console.log(blocks[i].innerHTML);
+		blocks[i].innerHTML = "Nowa wartość diva o klasie blocks";
+		console.log(blocks[i].innerHTML);
+		console.log(blocks[i].outerHTML);
+	}
+	/*
+		innerHTML zwraca tylko kod znajdujący się w środku danego elementu
+		outerHTML zwraca kod znajdujący się w środku danego elementu wraz z kodem tego elementu
+		
+		Analiza: ustalenie nowej wartości innerHTML zmieniło wewnętrzny kod każdego diva o klasie block
+	*/
+	
+	
 });
