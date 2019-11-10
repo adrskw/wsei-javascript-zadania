@@ -22,4 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
 			elements[i].children[0].style.textDecoration = "none";
 		}
 	}
+	
+	// Zadanie 1
+	let chrome = document.querySelector(".ex1 .chrome");
+	chrome.style.width = "100px";
+	chrome.nextElementSibling.innerHTML = "Google Chrome";
+	let edge = document.querySelector(".ex1 .edge");
+	edge.style.backgroundImage = 'url("assets/img/edge.png")';
+	edge.nextElementSibling.href = "https://www.microsoft.com/pl-pl/windows/microsoft-edge";
+	let firefox = document.querySelector(".ex1 .firefox");
+	firefox.style.backgroundImage = 'url("assets/img/firefox.png")';
+	firefox.nextElementSibling.href = "https://www.mozilla.org/pl/firefox/";
+	firefox.nextElementSibling.innerHTML = "Mozilla Firefox";
+	
+	// Kod zostaje dopisany wprost do elementów w HTML a nie do pliku CSS
+	
+	
 });
