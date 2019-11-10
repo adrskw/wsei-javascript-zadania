@@ -59,4 +59,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	for(var i = 0; i < errorMenuElements.length; i++) {
 		errorMenuElements[i].classList.remove("error");
 	}
+	
+	// Zadanie 4
+	let ex4LiElements = document.querySelectorAll(".ex4 li");
+	
+	for(var i = 0; i < ex4LiElements.length; i++) {
+		ex4LiElements[i].dataset.id = i + 1;
+	}
 });
