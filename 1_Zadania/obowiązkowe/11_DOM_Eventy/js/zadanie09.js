@@ -20,9 +20,15 @@ document.addEventListener("DOMContentLoaded", function () {
       // Tutaj this wskazuje na element Window, bo funkcja została
       //wywołana bez żadnego kontekstu.
       console.log("innerFuncOne: ", this);
+	  
+	  // Test zmiany koloru:
+	  // this.style.backgroundColor = "red";
     }
     innerFuncOne();
-
+	// innerFuncOne.apply(this);
+	
+	// Należy zamienić wywołanie funkcji innerFuncOne() na innerFuncOne.apply(this) (ewentualnie call), co pozwala na przesłanie kontekstu this
+	
   });
 
 })
