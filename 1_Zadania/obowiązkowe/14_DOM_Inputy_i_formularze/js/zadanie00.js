@@ -36,4 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			e.preventDefault();
 		}
 	})
+	
+	// Jeżeli ustalimy ten sam parametr name dla kilku inputów zostaną one przesłane jako tablica
 });
