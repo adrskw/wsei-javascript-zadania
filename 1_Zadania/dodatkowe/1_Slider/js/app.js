@@ -21,5 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     next.addEventListener("click", function () {
         console.log("kliknięto: next");
+
+        // punkt 5
+        list[imageIndex].classList.remove("visible");
+        imageIndex++;
+        list[imageIndex].classList.add("visible");
     });
+
+
 });
