@@ -1,4 +1,4 @@
-/*
+﻿/*
  <div class="fullScreen">
    <img src="./images/wrong.png">
    <button class="close">Close</button>
@@ -7,7 +7,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     // Punkt 2
-    console.log("Dzia�a");
+    console.log("Działa");
     var list = document.querySelectorAll(".gallery ul li");
     var bodyTag = document.body;
 
@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             fullScreenDiv.appendChild(btn);
 
-            document.body.appendChild(fullScreenDiv);
+            bodyTag.appendChild(fullScreenDiv);
         });
     }
+    // Nie zauważyłem żadnych błędów w działaniu strony
 });
