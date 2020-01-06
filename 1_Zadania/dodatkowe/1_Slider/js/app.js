@@ -33,5 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
         list[imageIndex].classList.add("visible");
     });
 
+    // Punkt 7
+    // Jeśli przy pierwszym elemencie klikniemy prev, zostanie wyświelona pusta strona
+    // Jeśli przy ostatnim elemencie klikniemy next, zostanie wyświelona pusta strona
+    // Dzieje się tak, gdyż przyciski próbują ustawić klasę visible w obrazku, który nie istnieje
+
 
 });
