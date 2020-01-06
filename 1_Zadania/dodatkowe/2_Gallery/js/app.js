@@ -19,6 +19,21 @@ document.addEventListener("DOMContentLoaded", function () {
         list[i].addEventListener("click", function () {
             // Punkt 4
             console.log(this.baseURI);
+            // Punkt 5
+            var fullScreenDiv = document.createElement("div");
+            fullScreenDiv.className = "fullScreen";
+
+            var image = document.createElement("img");
+            image.src = this.children[0].getAttribute("src");
+            fullScreenDiv.appendChild(image);
+
+            var btn = document.createElement("button");
+            btn.className = "close";
+            btn.innerText = "Close";
+
+            fullScreenDiv.appendChild(btn);
+
+            document.body.appendChild(fullScreenDiv);
         });
     }
 });
