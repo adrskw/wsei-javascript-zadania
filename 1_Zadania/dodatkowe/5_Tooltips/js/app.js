@@ -9,13 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log(tooltips);
 
+    // punkt 3, 4
     for (var i = 0; i < tooltips.length; i++) {
         tooltips[i].addEventListener("mouseover", function () {
-            console.log("najechano");
+            console.log(this.dataset.text);
         });
 
         tooltips[i].addEventListener("mouseout", function () {
-            console.log("wyjechano");
+            console.log(this.dataset.text);
         });
     }
 });
