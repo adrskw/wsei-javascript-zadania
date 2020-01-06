@@ -13,4 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // punkt 3
     list[imageIndex].classList.add("visible");
+
+    // punkt 4
+    prev.addEventListener("click", function () {
+        console.log("kliknięto: prev");
+    });
+
+    next.addEventListener("click", function () {
+        console.log("kliknięto: next");
+    });
 });
