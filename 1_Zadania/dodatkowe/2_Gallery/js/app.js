@@ -31,6 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
             btn.className = "close";
             btn.innerText = "Close";
 
+            // Punkt 6
+            btn.addEventListener("click", function () {
+                document.getElementsByClassName("fullScreen")[0].remove();
+            });
+
             fullScreenDiv.appendChild(btn);
 
             document.body.appendChild(fullScreenDiv);
