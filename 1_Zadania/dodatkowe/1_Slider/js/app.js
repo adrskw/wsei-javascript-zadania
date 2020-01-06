@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // punkt 4
     prev.addEventListener("click", function () {
         console.log("kliknięto: prev");
+
+        // punkt 6
+        list[imageIndex].classList.remove("visible");
+        imageIndex--;
+        list[imageIndex].classList.add("visible");
     });
 
     next.addEventListener("click", function () {
