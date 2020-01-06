@@ -1,3 +1,10 @@
+/*
+ <div class="fullScreen">
+   <img src="./images/wrong.png">
+   <button class="close">Close</button>
+ </div>
+ */
+
 document.addEventListener("DOMContentLoaded", function () {
     // Punkt 2
     console.log("Dzia³a");
@@ -10,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Punkt 3
     for (var i = 0; i < list.length; i++) {
         list[i].addEventListener("click", function () {
-            console.log(this);
+            // Punkt 4
+            console.log(this.baseURI);
         });
     }
 });
