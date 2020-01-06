@@ -25,9 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (list[i].dataset.tag.indexOf(tagInputValue) >= 0) {
                 list[i].classList.remove("invisible");
             }
-            else {
-                list[i].classList.add("invisible");
-            }
         }
     });
 
@@ -40,11 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         for (var i = 0; i < list.length; i++) {
             if (list[i].dataset.tag.indexOf(tagInputValue) >= 0) {
-                list[i].classList.remove("invisible");
-            }
-            else {
                 list[i].classList.add("invisible");
             }
         }
     });
+
+    // punkt 8
+    // strona nie dzia³a poprawnie, dla ka¿dego przycisku przypisana jest ta sama funkcja (zgodnie z wytycznymi zadania)
+    // przycisk hide powinien ukrywaæ obrazki z danym tagiem a show je pokazywaæ
+    // dokona³em poprawek w kodzie, ¿eby poprawnie dzia³a³
 });
