@@ -21,6 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
         // punkt 6
         list[imageIndex].classList.remove("visible");
         imageIndex--;
+
+        // Punkt 8
+        if (imageIndex < 0) {
+            imageIndex = list.length - 1;
+        }
+
         list[imageIndex].classList.add("visible");
     });
 
@@ -30,6 +36,12 @@ document.addEventListener("DOMContentLoaded", function() {
         // punkt 5
         list[imageIndex].classList.remove("visible");
         imageIndex++;
+
+        // Punkt 8
+        if (imageIndex >= list.length) {
+            imageIndex = 0;
+        }
+
         list[imageIndex].classList.add("visible");
     });
 
@@ -37,6 +49,4 @@ document.addEventListener("DOMContentLoaded", function() {
     // Jeśli przy pierwszym elemencie klikniemy prev, zostanie wyświelona pusta strona
     // Jeśli przy ostatnim elemencie klikniemy next, zostanie wyświelona pusta strona
     // Dzieje się tak, gdyż przyciski próbują ustawić klasę visible w obrazku, który nie istnieje
-
-
 });
