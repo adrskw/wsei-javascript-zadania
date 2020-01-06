@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(tagInput);
     console.log(list);
 
-    // punkt 3, 4, 5, 6
+    // punkt 3, 4, 5, 6, 7
     showButton.addEventListener("click", function () {
         console.log("klikniêto: " + this.id);
         tagInputValue = tagInput.value;
@@ -23,7 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         for (var i = 0; i < list.length; i++) {
             if (list[i].dataset.tag.indexOf(tagInputValue) >= 0) {
-                console.log("image " + i + " tags: " + list[i].dataset.tag);
+                list[i].classList.remove("invisible");
+            }
+            else {
+                list[i].classList.add("invisible");
             }
         }
     });
@@ -37,7 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         for (var i = 0; i < list.length; i++) {
             if (list[i].dataset.tag.indexOf(tagInputValue) >= 0) {
-                console.log("image " + i + " tags: " + list[i].dataset.tag);
+                list[i].classList.remove("invisible");
+            }
+            else {
+                list[i].classList.add("invisible");
             }
         }
     });
