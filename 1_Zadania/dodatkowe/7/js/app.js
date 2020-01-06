@@ -35,3 +35,9 @@ function createIdentityMatrix(rows, columns) {
 console.log("task 2");
 console.log(createIdentityMatrix(4, 4));
 
+// Zadanie 3
+function sortPlanet(planets) {
+    return planets.sort((a, b) => b.numberOfMoons - a.numberOfMoons);
+}
+console.log("task 3");
+console.log(sortPlanet(planets));
