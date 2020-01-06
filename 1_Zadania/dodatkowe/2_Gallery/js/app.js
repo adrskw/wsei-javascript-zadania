@@ -7,5 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(list);
     console.log(bodyTag);
 
-    
+    // Punkt 3
+    for (var i = 0; i < list.length; i++) {
+        list[i].addEventListener("click", function () {
+            console.log(this);
+        });
+    }
 });
