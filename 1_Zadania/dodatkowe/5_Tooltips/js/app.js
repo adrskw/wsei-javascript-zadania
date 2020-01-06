@@ -9,11 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log(tooltips);
 
-    // punkt 3, 4, 5
+    // punkt 3, 4, 5, 6
+    var tooltipText = document.createElement("span");
+    tooltipText.className = "tooltipText";
+
     for (var i = 0; i < tooltips.length; i++) {
         tooltips[i].addEventListener("mouseover", function () {
-            let tooltipText = document.createElement("span");
-            tooltipText.className = "tooltipText";
             tooltipText.innerText = this.dataset.text;
             this.appendChild(tooltipText);
 
@@ -21,7 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         tooltips[i].addEventListener("mouseout", function () {
+            tooltipText.remove();
+
             console.log(this.dataset.text);
         });
     }
+
+    // punkt 7
+    // strona poprawnie dzia³a, nie widzê ¿adnych problemów
 });
