@@ -11,5 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(list);
     console.log(imageIndex);
 
-
+    // punkt 3
+    list[imageIndex].classList.add("visible");
 });
