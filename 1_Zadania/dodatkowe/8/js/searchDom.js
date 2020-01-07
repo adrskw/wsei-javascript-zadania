@@ -51,3 +51,19 @@ function getElementAlt(element) {
 
 console.log("punkt 4");
 console.log(getElementAlt(images));
+
+// punkt 4
+var myLink = document.getElementsByClassName("my-link");
+
+function getElementHref(element) {
+    let resultArray = [];
+
+    for (var i = 0; i < element.length; i++) {
+        resultArray.push(element[i].href);
+    }
+
+    return resultArray;
+}
+
+console.log("punkt 5");
+console.log(getElementHref(myLink));
