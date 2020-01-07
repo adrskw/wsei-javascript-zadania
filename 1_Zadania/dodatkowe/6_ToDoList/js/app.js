@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
             task.append(taskValue, buttonDelete, buttonComplete);
 
             taskList.appendChild(task);
+
+            // punkt 6
+            taskInput.value = "";
         }
         else {
             alert("Treœæ zadania powinna mieæ od 6 do 99 znaków");
