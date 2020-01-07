@@ -41,3 +41,29 @@ function sortPlanet(planets) {
 }
 console.log("task 3");
 console.log(sortPlanet(planets));
+
+
+// Dodatkowe
+// Zadanie 1 - dodatkowe
+function addTheSameNumbers(number, numbersArray) {
+    let result = 0;
+
+    if (numbersArray.includes(number)) {
+        for (var i = 0; i < numbersArray.length; i++) {
+            if (number === numbersArray[i]) {
+                result += number;
+            }
+        }
+    }
+    else {
+        result = null;
+    }
+    
+
+    return result;
+}
+console.log("extra task 1");
+console.log(addTheSameNumbers(7, [4, 7, 24, 7, 0, 10]));
+console.log(addTheSameNumbers(9, [33, 54, 2, 1, 9, 100]));
+console.log(addTheSameNumbers(0, [33, 0, 2, 0, 9, 0]));
+console.log(addTheSameNumbers(43, [6, 0, 2, 2, 3, 46]));
