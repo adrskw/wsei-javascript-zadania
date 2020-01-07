@@ -15,3 +15,13 @@ function getDataInfo(element) {
 
 console.log("punkt 1");
 console.log(getDataInfo(menu));
+
+// punkt 2
+var mainContener = document.getElementById("main-contener");
+
+function getElementClass(element) {
+    return Array.from(element.classList);
+}
+
+console.log("punkt 2");
+console.log(getElementClass(mainContener));
