@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var addTaskButton = document.getElementById("addTaskButton");
     var taskList = document.getElementById("taskList");
     var removeFinishedTasksButton = document.getElementById("removeFinishedTasksButton");
+    var counter = document.getElementById("counter");
 
     addTaskButton.addEventListener("click", function () {
         // punkt 5
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // punkt 3
             buttonDelete.addEventListener("click", function () {
                 task.remove();
+                countToDoTasks();
             });
 
             let buttonComplete = document.createElement("button");
@@ -24,11 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
             // punkt 2
             buttonComplete.addEventListener("click", function () {
                 task.classList.toggle("done");
+                countToDoTasks();
             });
 
             task.append(taskValue, buttonDelete, buttonComplete);
 
             taskList.appendChild(task);
+            countToDoTasks();
 
             // punkt 6
             taskInput.value = "";
@@ -47,4 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
             doneTasks[i].remove();
         }
     });
+
+    // punkt 7
+    function countToDoTasks() {
+        let doneTasks = document.querySelectorAll(".done");
+
+        counter.innerText = taskList.children.length - doneTasks.length;
+    }
 });
