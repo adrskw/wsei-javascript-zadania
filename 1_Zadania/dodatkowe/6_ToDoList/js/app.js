@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var taskInput = document.getElementById("taskInput");
     var addTaskButton = document.getElementById("addTaskButton");
     var taskList = document.getElementById("taskList");
+    var removeFinishedTasksButton = document.getElementById("removeFinishedTasksButton");
 
     addTaskButton.addEventListener("click", function () {
         let task = document.createElement("li");
@@ -20,11 +21,20 @@ document.addEventListener("DOMContentLoaded", function () {
         buttonComplete.innerText = "Complete";
         // punkt 2
         buttonComplete.addEventListener("click", function () {
-            taskValue.classList.toggle("done");
+            task.classList.toggle("done");
         });
 
         task.append(taskValue, buttonDelete, buttonComplete);
 
         taskList.appendChild(task);
+    });
+
+    // punkt 4
+    removeFinishedTasksButton.addEventListener("click", function () {
+        var doneTasks = document.querySelectorAll(".done");
+
+        for (var i = 0; i < doneTasks.length; i++) {
+            doneTasks[i].remove();
+        }
     });
 });
