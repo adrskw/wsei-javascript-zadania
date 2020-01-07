@@ -91,3 +91,20 @@ console.log("extra task 2");
 console.log(factors(2));
 console.log(factors(54));
 console.log(factors(-4));
+
+// Zadanie 3 - dodatkowe
+function getMissingElement(numbersArray) {
+    for (var i = 0; i < numbersArray.length - 1; i++) {
+        let difference = numbersArray[i + 1]- numbersArray[i];
+        
+        if (difference !== 1) {
+            return numbersArray[i] + 1;
+        }
+    }
+
+    return null;
+}
+console.log("extra task 3");
+console.log(getMissingElement([1, 2, 3, 4, 5, 6, 7]));
+console.log(getMissingElement([6, 7, 8, 10, 11, 12, 13, 14, 15]));
+console.log(getMissingElement([-4, -3, -2, 0, 1, 2, 3, 4]));
