@@ -67,3 +67,27 @@ console.log(addTheSameNumbers(7, [4, 7, 24, 7, 0, 10]));
 console.log(addTheSameNumbers(9, [33, 54, 2, 1, 9, 100]));
 console.log(addTheSameNumbers(0, [33, 0, 2, 0, 9, 0]));
 console.log(addTheSameNumbers(43, [6, 0, 2, 2, 3, 46]));
+
+// Zadanie 2 - dodatkowe
+function factors(number) {
+    let resultArray = [];
+
+    if (number > 0) {
+        for (var i = 1; i <= Math.floor(Math.sqrt(number)); i++) {
+            if (number % i === 0) {
+                resultArray.push(i);
+
+                if (number / i !== i) {
+                    resultArray.push(number / i);
+                }
+            }
+        }
+        resultArray.sort((a, b) => b - a);
+    }
+
+    return resultArray;
+}
+console.log("extra task 2");
+console.log(factors(2));
+console.log(factors(54));
+console.log(factors(-4));
