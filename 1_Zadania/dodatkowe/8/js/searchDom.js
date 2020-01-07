@@ -35,3 +35,19 @@ function getElementText(element) {
 
 console.log("punkt 3");
 console.log(getElementText(pinkColor));
+
+// punkt 4
+var images = document.getElementsByClassName("images");
+
+function getElementAlt(element) {
+    let resultArray = [];
+
+    for (var i = 0; i < element.length; i++) {
+        resultArray.push(element[i].alt);
+    }
+
+    return resultArray;
+}
+
+console.log("punkt 4");
+console.log(getElementAlt(images));
