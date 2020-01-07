@@ -25,3 +25,13 @@ function getElementClass(element) {
 
 console.log("punkt 2");
 console.log(getElementClass(mainContener));
+
+// punkt 3
+var pinkColor = document.querySelector(".pink-color");
+
+function getElementText(element) {
+    return element.innerText;
+}
+
+console.log("punkt 3");
+console.log(getElementText(pinkColor));
