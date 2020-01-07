@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let buttonDelete = document.createElement("button");
         buttonDelete.innerText = "Delete";
+        // punkt 3
+        buttonDelete.addEventListener("click", function () {
+            task.remove();
+        });
 
         let buttonComplete = document.createElement("button");
         buttonComplete.innerText = "Complete";
