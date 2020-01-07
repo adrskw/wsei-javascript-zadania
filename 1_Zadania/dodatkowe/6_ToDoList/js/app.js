@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // punkt 1
     var taskInput = document.getElementById("taskInput");
+    var priorityInput = document.getElementById("priorityInput");
     var addTaskButton = document.getElementById("addTaskButton");
     var taskList = document.getElementById("taskList");
     var removeFinishedTasksButton = document.getElementById("removeFinishedTasksButton");
@@ -9,33 +10,46 @@ document.addEventListener("DOMContentLoaded", function () {
     addTaskButton.addEventListener("click", function () {
         // punkt 5
         if (taskInput.value.length > 5 && taskInput.value.length < 100) {
-            let task = document.createElement("li");
-            let taskValue = document.createElement("h1");
-            taskValue.innerText = taskInput.value;
+            var priorityValue = parseFloat(priorityInput.value);
 
-            let buttonDelete = document.createElement("button");
-            buttonDelete.innerText = "Delete";
-            // punkt 3
-            buttonDelete.addEventListener("click", function () {
-                task.remove();
+            if (priorityValue >= 1 && priorityValue <= 10 && Number.isInteger(priorityValue)) {
+                let task = document.createElement("li");
+                task.dataset.priority = priorityValue;
+
+                let taskValue = document.createElement("h1");
+                taskValue.innerText = taskInput.value + " (priority: " + priorityValue + ")";
+
+                let buttonDelete = document.createElement("button");
+                buttonDelete.innerText = "Delete";
+                // punkt 3
+                buttonDelete.addEventListener("click", function () {
+                    task.remove();
+                    countToDoTasks();
+                });
+
+                let buttonComplete = document.createElement("button");
+                buttonComplete.innerText = "Complete";
+                // punkt 2
+                buttonComplete.addEventListener("click", function () {
+                    task.classList.toggle("done");
+                    countToDoTasks();
+                });
+
+                task.append(taskValue, buttonDelete, buttonComplete);
+
+                taskList.appendChild(task);
+                Array.from(taskList.children).sort((a, b) => b.dataset.priority - a.dataset.priority)
+                    .forEach((element) => element.parentNode.appendChild(element));
+
                 countToDoTasks();
-            });
 
-            let buttonComplete = document.createElement("button");
-            buttonComplete.innerText = "Complete";
-            // punkt 2
-            buttonComplete.addEventListener("click", function () {
-                task.classList.toggle("done");
-                countToDoTasks();
-            });
-
-            task.append(taskValue, buttonDelete, buttonComplete);
-
-            taskList.appendChild(task);
-            countToDoTasks();
-
-            // punkt 6
-            taskInput.value = "";
+                // punkt 6
+                taskInput.value = "";
+                priorityInput.value = "";
+            }
+            else {
+                alert("Priorytet zadania powinien byæ liczb¹ ca³kowit¹ od 1 do 10");
+            }
         }
         else {
             alert("Treœæ zadania powinna mieæ od 6 do 99 znaków");
