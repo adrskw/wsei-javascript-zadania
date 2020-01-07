@@ -6,27 +6,34 @@ document.addEventListener("DOMContentLoaded", function () {
     var removeFinishedTasksButton = document.getElementById("removeFinishedTasksButton");
 
     addTaskButton.addEventListener("click", function () {
-        let task = document.createElement("li");
-        let taskValue = document.createElement("h1");
-        taskValue.innerText = taskInput.value;
+        // punkt 5
+        if (taskInput.value.length > 5 && taskInput.value.length < 100) {
+            let task = document.createElement("li");
+            let taskValue = document.createElement("h1");
+            taskValue.innerText = taskInput.value;
 
-        let buttonDelete = document.createElement("button");
-        buttonDelete.innerText = "Delete";
-        // punkt 3
-        buttonDelete.addEventListener("click", function () {
-            task.remove();
-        });
+            let buttonDelete = document.createElement("button");
+            buttonDelete.innerText = "Delete";
+            // punkt 3
+            buttonDelete.addEventListener("click", function () {
+                task.remove();
+            });
 
-        let buttonComplete = document.createElement("button");
-        buttonComplete.innerText = "Complete";
-        // punkt 2
-        buttonComplete.addEventListener("click", function () {
-            task.classList.toggle("done");
-        });
+            let buttonComplete = document.createElement("button");
+            buttonComplete.innerText = "Complete";
+            // punkt 2
+            buttonComplete.addEventListener("click", function () {
+                task.classList.toggle("done");
+            });
 
-        task.append(taskValue, buttonDelete, buttonComplete);
+            task.append(taskValue, buttonDelete, buttonComplete);
 
-        taskList.appendChild(task);
+            taskList.appendChild(task);
+        }
+        else {
+            alert("Treœæ zadania powinna mieæ od 6 do 99 znaków");
+        }
+        
     });
 
     // punkt 4
