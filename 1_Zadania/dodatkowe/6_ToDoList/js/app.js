@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let buttonComplete = document.createElement("button");
         buttonComplete.innerText = "Complete";
+        // punkt 2
+        buttonComplete.addEventListener("click", function () {
+            taskValue.classList.toggle("done");
+        });
 
         task.append(taskValue, buttonDelete, buttonComplete);
 
