@@ -4,4 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
         return prev * curr;
     })
     console.log(result);
+
+    var cities = ["Kraków", "Olsztyn", "Szczecin", "Ostrów Wielkopolski"];
+    var citiesCount = cities.map(function (city) {
+        return city.length;
+    });
+    console.log(citiesCount);
 })
