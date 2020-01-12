@@ -31,4 +31,24 @@ document.addEventListener('DOMContentLoaded', function () {
     animals.forEach(function (animal) {
         console.log(animal);
     });
+
+    // Zadanie 3
+    var years = [1995, 1856, 2014, 1987];
+    var ages = years.map(function (year) {
+        return 2020 - year;
+    });
+
+    console.log(ages);
+
+    // Zadanie 4
+    var numbers = [10, 5, 2, 4];
+    var numbersSum = numbers.reduce(function (a, b) {
+        return a + b;
+    });
+    var numbersMultiplication = numbers.reduce(function (a, b) {
+        return a * b;
+    });
+
+    console.log(numbersSum);
+    console.log(numbersMultiplication);
 })
